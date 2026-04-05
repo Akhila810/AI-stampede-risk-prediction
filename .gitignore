@@ -1,0 +1,51 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pt
+*.pth
+.venv/
+crowd_env/
+
+# ========================
+# Node
+# ========================
+node_modules/
+
+# ========================
+# Environment files
+# ========================
+.env
+
+# ========================
+# Data & uploads (CRITICAL)
+# ========================
+# Data & uploads (CRITICAL)
+data/
+uploads/
+*.mp4
+*.avi
+
+# Allow sample data
+!sample_data/
+!sample_data/*.mp4
+
+# ========================
+# Logs
+# ========================
+*.log
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Build files
+# ========================
+dist/
+build/
