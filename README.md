@@ -18,6 +18,14 @@ Video Input → Person Detection (YOLOv8) → Motion Analysis (Optical Flow) →
 
 ---
 
+## 🧩 Key Components
+
+- **YOLOv8 Detector**: Detects individuals in crowd frames  
+- **Optical Flow Module**: Captures motion intensity and direction  
+- **Feature Engineering Layer**: Combines spatial + temporal features  
+- **LSTM Model**: Predicts risk based on sequential crowd behavior  
+- **Alert System**: Triggers warning when high-risk detected  
+
 ## ⚙️ Features
 
 * Real-time crowd detection using YOLOv8
@@ -40,6 +48,13 @@ Video Input → Person Detection (YOLOv8) → Motion Analysis (Optical Flow) →
 7. Alert sound is triggered for high-risk situations
 
 ---
+
+## ⏱️ Processing Flow
+
+- Frame Extraction: ~10–15 FPS  
+- Detection + Feature Extraction: Real-time  
+- Temporal Buffer: 30 frames  
+- Prediction Interval: Every few seconds 
 
 ## 🖥️ Tech Stack
 
@@ -100,6 +115,12 @@ sample_data/    → Sample input video
 
 ---
 
+## 📈 Model Behavior
+
+- High crowd density + chaotic motion → High Risk  
+- Moderate density + directional flow → Medium Risk  
+- Sparse crowd + stable motion → Low Risk  
+
 ## 📸 Screenshots
 
 (Add your screenshots here)
@@ -133,6 +154,17 @@ backend/models/
 
 ---
 
+## 🌍 Real-World Applications
+
+- Crowd monitoring in festivals and events  
+- Railway stations and metro platforms  
+- Stadium and concert safety  
+- Smart city surveillance systems 
+
 ## 👤 Author
 
 Developed as a final year project focused on AI-based crowd safety and risk prediction.
+
+## 🎥 Demo
+
+[Watch Demo Video](https://drive.google.com/file/d/1iSYnwc6YbNW0Ih481iEnbtJeSEdVWTLf/view?usp=sharing)
