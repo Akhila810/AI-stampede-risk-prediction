@@ -37,6 +37,13 @@ Video Input → Person Detection (YOLOv8) → Motion Analysis (Optical Flow) →
 
 ---
 
+## 🏗️ Design Considerations
+
+- Separation of training and inference pipelines
+- Lightweight backend for real-time processing
+- Modular architecture for scalability
+- Efficient frame buffering for temporal modeling
+
 ## 🧪 How It Works
 
 1. User uploads a video through the frontend
@@ -114,6 +121,11 @@ sample_data/    → Sample input video
 * Alert sound triggered for high risk
 
 ---
+## 📊 Evaluation
+
+- Tested on multiple crowd videos
+- Correctly identifies high-density + chaotic motion scenarios
+- Provides early warning before critical crowd congestion
 
 ## 📈 Model Behavior
 
