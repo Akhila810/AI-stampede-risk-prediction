@@ -15,7 +15,15 @@ from socket_instance import socketio
 # -------------------------------
 
 temporal = TemporalBuffer(sequence_length=10)
-lstm = LSTMInfer("models/lstm_model.pt")
+import os
+
+MODEL_PATH = "models/lstm_model.pt"
+
+if os.path.exists(MODEL_PATH):
+    lstm = LSTMInfer(MODEL_PATH)
+else:
+    print("⚠️ Model not found. Running without LSTM.")
+    lstm = None
 
 # 🔥 HISTORY STORAGE
 history_data = []
