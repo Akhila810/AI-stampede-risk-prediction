@@ -13,7 +13,7 @@ import {
   AreaChart
 } from "recharts";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://stampede-backend1.onrender.com");
 
 function App() {
   const videoRef = useRef(null);
@@ -52,7 +52,7 @@ function App() {
   useEffect(() => {
   if (page === "history") {
     const fetchHistory = () => {
-      fetch("http://localhost:5000/history")
+      fetch("https://stampede-backend1.onrender.com/history")
         .then(res => res.json())
         .then(data => {
           console.log("HISTORY FRONTEND:", data); // DEBUG
@@ -135,7 +135,7 @@ function App() {
     const formData = new FormData();
     formData.append("video", file);
 
-    await fetch("http://localhost:5000/start", {
+    await fetch("https://stampede-backend1.onrender.com/start", {
       method: "POST",
       body: formData,
     });
