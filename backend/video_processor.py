@@ -33,7 +33,7 @@ risk_history = deque(maxlen=7)
 # -------------------------------
 # FEATURE VECTOR (58D)
 # -------------------------------
-
+print("Processing started")
 def build_feature_vector(frame, detections, flow_mag):
     h, w = frame.shape[:2]
 

@@ -33,11 +33,13 @@ def start():
     video.save(video_path)
 
     print("🎥 VIDEO RECEIVED:", video_path)
+    print("START API HIT")
 
     t = threading.Thread(target=process_video, args=(video_path,))
+    t.daemon = True
     t.start()
 
-    return jsonify({"status": "processing started"})
+    return jsonify({"status": "processing started"}), 200
 
 
 if __name__ == "__main__":
